@@ -73,7 +73,7 @@ print(encoded_scaled_data)
 ## License
 
 This project is licensed under the MIT License - see the <a href="https://opensource.org/license/mit" target="_blank">LICENSE</a>
- file for details.
+file for details.
 
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
