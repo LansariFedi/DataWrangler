@@ -72,7 +72,7 @@ print(encoded_scaled_data)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE]([https://github.com/yourusername/yourrepositoryname/blob/main/LICENSE](https://opensource.org/license/mit)) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/mit) file for details.
 
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
