@@ -4,7 +4,7 @@ DataWizard is a Python library for preprocessing data, including cleaning, encod
 
 ## Installation
 
-You can install DataWrangler using pip:
+You can install DataWizard using pip:
 
 ```sh
 pip install datawizard
