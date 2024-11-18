@@ -1,13 +1,29 @@
-# DataWizard
+Metadata-Version: 2.1
+Name: datawrangler
+Version: 0.1.0
+Summary: A data wrangling library
+Home-page: https://github.com/LansariFedi/datawrangler
+Author: Lansari Fedi
+Author-email: lansarifedi7@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
 
-DataWizard is a Python library for preprocessing data, including cleaning, encoding, and scaling. It is designed to simplify the data wrangling process for machine learning tasks.
+# DataWrangler
+
+DataWrangler is a Python library for preprocessing data, including cleaning, encoding, and scaling. It is designed to simplify the data wrangling process for machine learning tasks.
 
 ## Installation
 
 You can install DataWrangler using pip:
 
 ```sh
-pip install datawizard
+pip install datawrangler
 ```
 
 ## Usage
@@ -15,13 +31,13 @@ pip install datawizard
 Importing the Library
 
 ```python
-from datawizard import DataWizard
+from datawrangler import DataWrangler
 ```
 
 ### Creating an Instance
 
 ```python
-dw = DataWizard()
+dw = DataWrangler()
 ```
 
 ### Cleaning Data
@@ -50,7 +66,7 @@ new_encoded_scaled_data = dw.EncodeAndScale_transform(new_data)
 
 ```python
 import pandas as pd
-from datawizard import DataWizard
+from datawrangler import DataWrangler
 
 # Sample data
 data = pd.DataFrame({
@@ -58,8 +74,8 @@ data = pd.DataFrame({
     'value': [1.0, 2.5, None, 4.0]
 })
 
-# Create an instance of DataWizard
-dw = DataWizard()
+# Create an instance of DataWrangler
+dw = DataWrangler()
 
 # Clean the data
 cleaned_data = dw.clean(data)
@@ -80,3 +96,5 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 ## Author
 
 Lansari Fedi - lansarifedi7@gmail.com
+
+
