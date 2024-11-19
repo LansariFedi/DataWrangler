@@ -1,6 +1,6 @@
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
-class DataWizard:
+class PyBandiger:
     def __init__(self):
         self.le = {}
         self.ss = StandardScaler()

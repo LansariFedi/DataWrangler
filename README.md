@@ -1,13 +1,13 @@
-# DataWizard
+# PyBandiger
 
-DataWizard is a Python library for preprocessing data, including cleaning, encoding, and scaling. It is designed to simplify the data wrangling process for machine learning tasks.
+PyBandiger is a Python library for preprocessing data, including cleaning, encoding, and scaling. It is designed to simplify the data wrangling process for machine learning tasks.
 
 ## Installation
 
-You can install DataWizard using pip:
+You can install PyBandiger using pip:
 
 ```sh
-pip install datawizard
+pip install pybandiger
 ```
 
 ## Usage
@@ -15,13 +15,13 @@ pip install datawizard
 Importing the Library
 
 ```python
-from datawizard import DataWizard
+from pybandiger import PyBandiger
 ```
 
 ### Creating an Instance
 
 ```python
-dw = DataWizard()
+dw = PyBandiger()
 ```
 
 ### Cleaning Data
@@ -50,7 +50,7 @@ new_encoded_scaled_data = dw.EncodeAndScale_transform(new_data)
 
 ```python
 import pandas as pd
-from datawizard import DataWizard
+from pybandiger import PyBandiger
 
 # Sample data
 data = pd.DataFrame({
@@ -58,8 +58,8 @@ data = pd.DataFrame({
     'value': [1.0, 2.5, None, 4.0]
 })
 
-# Create an instance of DataWizard
-dw = DataWizard()
+# Create an instance of PyBandiger
+dw = PyBandiger()
 
 # Clean the data
 cleaned_data = dw.clean(data)
