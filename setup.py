@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='pybandiger',
-    version='0.1.1',
+    version='0.1.2',
     packages=find_packages(),
     install_requires=[
         'scikit-learn',
@@ -13,7 +13,7 @@ setup(
     description='A data wrangling library',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/LansariFedi/datawrangler',
+    url='https://github.com/LansariFedi/PyBandiger',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
