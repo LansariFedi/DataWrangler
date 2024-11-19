@@ -19,7 +19,8 @@ class PyBandiger:
         num_col = data.select_dtypes(include=['int', 'float']).columns
         for col in cat_col:
             encoder = LabelEncoder()
-            self.le[col] = encoder.fit_transform(data[col])
+            data[col] = encoder.fit_transform(data[col])
+            self.le[col] = encoder
         data[num_col] = self.ss.fit_transform(data[num_col])
         return data
 
