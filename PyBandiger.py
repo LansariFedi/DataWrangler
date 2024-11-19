@@ -31,9 +31,9 @@ class PyBandiger:
     def EncodeAndScale_transform(self, data):
         cat_col = data.select_dtypes(include='object').columns
         num_col = data.select_dtypes(include=['int', 'float']).columns
-        if cat_col:
+        if cat_col != []:
             for col in cat_col:
                 data[col] = self.le[col].transform(data[col])
-        if num_col:
+        if num_col != []:
             data[num_col] = self.ss.transform(data[num_col])
         return data
