@@ -21,7 +21,7 @@ from pybandiger import PyBandiger
 ### Creating an Instance
 
 ```python
-dw = PyBandiger()
+pb = PyBandiger()
 ```
 
 ### Cleaning Data
@@ -29,7 +29,7 @@ dw = PyBandiger()
 The `clean` method fills missing values in categorical columns with 'Missing' and in numerical columns with the mean of the column.
 
 ```python
-cleaned_data = dw.clean(data)
+cleaned_data = pb.clean(data)
 ```
 
 ### Encoding and Scaling Data
@@ -37,13 +37,13 @@ cleaned_data = dw.clean(data)
 The `EncodeAndScale_fit` method encodes categorical columns using `LabelEncoder` and scales numerical columns using `StandardScaler`.
 
 ```python
-encoded_scaled_data = dw.EncodeAndScale_fit(cleaned_data)
+encoded_scaled_data = pb.EncodeAndScale_fit(cleaned_data)
 ```
 
 The `EncodeAndScale_transform` method transforms new data using the previously fitted encoders and scaler.
 
 ```python
-new_encoded_scaled_data = dw.EncodeAndScale_transform(new_data)
+new_encoded_scaled_data = pb.EncodeAndScale_transform(new_data)
 ```
 
 ### Example
@@ -59,13 +59,13 @@ data = pd.DataFrame({
 })
 
 # Create an instance of PyBandiger
-dw = PyBandiger()
+pb = PyBandiger()
 
 # Clean the data
-cleaned_data = dw.clean(data)
+cleaned_data = pb.clean(data)
 
 # Encode and scale the data
-encoded_scaled_data = dw.EncodeAndScale_fit(cleaned_data)
+encoded_scaled_data = pb.EncodeAndScale_fit(cleaned_data)
 
 print(encoded_scaled_data)
 ```
