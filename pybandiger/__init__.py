@@ -1,4 +1,4 @@
-from .pybandiger import PyBandiger
+from .PyBandiger import PyBandiger
 
 __version__ = '0.1.3'
 
