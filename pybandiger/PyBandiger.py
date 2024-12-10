@@ -38,3 +38,12 @@ class PyBandiger:
                 raise ValueError(f"Column '{col}' was not fitted with an encoder.")
         data[num_col] = self.ss.transform(data[num_col])
         return data
+    def time_transform(self, data, date_col = 'date'):
+        data = data.copy()
+        data[date_col] = pd.to_datetime(data[date_col])
+        data['year'] = data[date_col].dt.year
+        data['month'] = data[date_col].dt.month
+        data['day'] = data[date_col].dt.day
+        data['dayofweek'] = data[date_col].dt.dayofweek
+        data = data.drop(date_col, axis=1)
+        return data

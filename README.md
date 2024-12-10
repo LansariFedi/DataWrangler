@@ -1,6 +1,6 @@
 # PyBandiger
 
-PyBandiger is a Python library for preprocessing data, including cleaning, encoding, and scaling. It is designed to simplify the data wrangling process for machine learning tasks.
+PyBandiger is a Python library for preprocessing data, including cleaning, encoding, scaling, and transforming date columns. It is designed to simplify the data wrangling process for machine learning tasks.
 
 ## Installation
 
@@ -46,6 +46,14 @@ The `EncodeAndScale_transform` method transforms new data using the previously f
 new_encoded_scaled_data = pb.EncodeAndScale_transform(new_data)
 ```
 
+### Transforming Date Columns
+
+The `time_transform` method extracts year, month, day, and day of the week from a date column and drops the original date column.
+
+```python
+transformed_data = pb.time_transform(data, date_col='date')
+```
+
 ### Example
 
 ```python
@@ -55,7 +63,8 @@ from pybandiger import PyBandiger
 # Sample data
 data = pd.DataFrame({
     'category': ['A', 'B', 'A', None],
-    'value': [1.0, 2.5, None, 4.0]
+    'value': [1.0, 2.5, None, 4.0],
+    'date': ['2021-01-01', '2021-02-01', '2021-03-01', '2021-04-01']
 })
 
 # Create an instance of PyBandiger
@@ -67,7 +76,11 @@ cleaned_data = pb.clean(data)
 # Encode and scale the data
 encoded_scaled_data = pb.EncodeAndScale_fit(cleaned_data)
 
+# Transform date columns
+transformed_data = pb.time_transform(cleaned_data)
+
 print(encoded_scaled_data)
+print(transformed_data)
 ```
 
 ## License
