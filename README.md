@@ -12,7 +12,7 @@ pip install pybandiger
 
 ## Usage
 
-Importing the Library
+### Importing the Library
 
 ```python
 from pybandiger import PyBandiger
@@ -32,6 +32,10 @@ The `clean` method fills missing values in categorical columns with 'Missing' an
 cleaned_data = pb.clean(data)
 ```
 
+**Parameters:**
+
+- `data` (pd.DataFrame): The input DataFrame to be cleaned.
+
 ### Encoding and Scaling Data
 
 The `EncodeAndScale_fit` method encodes categorical columns using `LabelEncoder` and scales numerical columns using `StandardScaler`.
@@ -40,11 +44,19 @@ The `EncodeAndScale_fit` method encodes categorical columns using `LabelEncoder`
 encoded_scaled_data = pb.EncodeAndScale_fit(cleaned_data)
 ```
 
+**Parameters:**
+
+- `data` (pd.DataFrame): The input DataFrame to be encoded and scaled.
+
 The `EncodeAndScale_transform` method transforms new data using the previously fitted encoders and scaler.
 
 ```python
 new_encoded_scaled_data = pb.EncodeAndScale_transform(new_data)
 ```
+
+**Parameters:**
+
+- `data` (pd.DataFrame): The new DataFrame to be transformed using the fitted encoders and scaler.
 
 ### Transforming Date Columns
 
@@ -53,6 +65,12 @@ The `time_transform` method extracts year, month, day, and day of the week from 
 ```python
 transformed_data = pb.time_transform(data, date_col='date')
 ```
+
+**Parameters:**
+
+- `data` (pd.DataFrame): The input DataFrame containing the date column.
+- `date_col` (str): The name of the date column to be transformed. Default is 'date'.
+- `prefix` (str): The prefix to add to the new date-related columns. Default is ''.
 
 ### Example
 
@@ -85,10 +103,10 @@ print(transformed_data)
 
 ## License
 
-This project is licensed under the MIT License - see the <a href="https://opensource.org/license/mit" target="_blank">LICENSE</a>
-file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Contributing
+## Contributing
+
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
 ## Author
